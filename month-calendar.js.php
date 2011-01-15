@@ -13,6 +13,7 @@
 
 function mc_reload_calendar(my_year)
 {
+	jQuery("#mc_calendar_loading").css('top', jQuery("#mc_header").position().top);
 	jQuery("#mc_calendar_loading").fadeIn(400);
 	
 	jQuery.ajax(
