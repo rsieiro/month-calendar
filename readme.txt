@@ -1,6 +1,6 @@
 === Month Calendar ===
 Contributors: rsieiro
-Donate link: http://sharpcube.com/
+Donate link: http://rodrigo.sharpcube.com/
 Tags: month, calendar, widget
 Requires at least: 3.0
 Tested up to: 3.0.4
