@@ -9,7 +9,11 @@ Author: Rodrigo Sieiro
 Author URI: http://rodrigo.sharpcube.com
 */
 
+// Plugin version
 define('MONTH_CALENDAR_VERSION', '1.0');
+
+// This URL will always point to the path our plugin files are located
+define('MC_URL', plugins_url() . '/' . str_replace(basename(__FILE__), "", plugin_basename(__FILE__)));
 
 class Month_Widget_Calendar extends WP_Widget
 {
@@ -229,8 +233,6 @@ function mc_add_header_code()
 	// Get our use_css setting from WP options
 	$use_css = get_option('mc_use_css', '1');
 	
-	// This URL will always point to the path our plugin files are located
-	$mc_url = plugins_url() . '/' . str_replace(basename(__FILE__), "", plugin_basename(__FILE__));
 	
 	if (function_exists('wp_enqueue_script') && !is_admin()) 
 	{
@@ -239,12 +241,12 @@ function mc_add_header_code()
 		if (!wp_script_is('jquery-ui', 'registered')) wp_register_script('jquery-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js', array('jquery'), '1.8.6');
 		
 		// Enqueues the javascript file
-		wp_enqueue_script('mc_js', $mc_url . 'month-calendar.js.php', array('jquery', 'jquery-ui'), MONTH_CALENDAR_VERSION);
+		wp_enqueue_script('mc_js', MC_URL . 'month-calendar.js.php', array('jquery', 'jquery-ui'), MONTH_CALENDAR_VERSION);
 		
 		// Only enqueue the CSS file if the user wants to
 		if ($use_css)
 		{
-			wp_enqueue_style('mc_style', $mc_url . 'month-calendar.css', array(), MONTH_CALENDAR_VERSION);
+			wp_enqueue_style('mc_style', MC_URL . 'month-calendar.css', array(), MONTH_CALENDAR_VERSION);
 		}
 	} 
 }

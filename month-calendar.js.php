@@ -10,9 +10,8 @@
 	// Let the browser know we're outputting javascript
 	header('Content-type: text/javascript');
 	
-	// This URL will always point to the path our plugin files are located
-	$mc_url = plugins_url() . '/' . str_replace(basename( __FILE__), "", plugin_basename(__FILE__));
-	$mc_file = $mc_url . 'month-calendar-ajax.php';
+	// We use the URL constant defined by the plugin
+	$mc_file = MC_URL . 'month-calendar-ajax.php';
 
 ?>
 
