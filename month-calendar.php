@@ -2,11 +2,11 @@
 
 /*
 Plugin Name: Month Calendar
-Plugin URI: http://sharpcube.com
+Plugin URI: http://rodrigo.sharpcube.com
 Description: A calendar widget that shows post count per month.
 Version: 1.0
 Author: Rodrigo Sieiro
-Author URI: http://sharpcube.com
+Author URI: http://rodrigo.sharpcube.com
 */
 
 define('MONTH_CALENDAR_VERSION', '1.0');
@@ -16,7 +16,7 @@ class Month_Widget_Calendar extends WP_Widget
 	function Month_Widget_Calendar()
 	{
 		// Register the widget with WP
-		$widget_ops = array('classname' => 'month_calendar', 'description' => __( 'A month calendar with posts count') );
+		$widget_ops = array('classname' => 'month_calendar', 'description' => __( 'A calendar widget that shows post count per month') );
 		$this->WP_Widget('month_calendar', __('Month Calendar'), $widget_ops);
 	}
 
