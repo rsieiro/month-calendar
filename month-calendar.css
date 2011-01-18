@@ -1,0 +1,15 @@
+#mc_wrapper { position: relative; width:100%; margin-bottom: 10px; }
+#mc_calendar { font: normal 10px Helvetica, Arial; }
+#mc_header { position: relative; background-color: #aaa; width: 100%; border-bottom:1px solid white; text-align: center; font-size: 30px; line-height: 30px; font-weight: bold; color: white; padding: 5px 0; }
+#mc_next_year, #mc_prev_year { position: absolute; top: 5px; cursor: pointer; color: white; font-size: 15px; line-height: 30px; }
+#mc_next_year { right: 5px; }
+#mc_prev_year { left: 5px; }
+#mc_header a.mc_inactive { color: #aaa; cursor: default; }
+.mc_months { background-color: white; overflow:hidden; width:100%; }
+.mc_months ul.mc_list { margin: 0 !important; padding: 0 !important; overflow:hidden; background-color: white; }
+.mc_months li.mc_month { margin: 0 !important; padding: 0 !important; background-color:whiteSmoke; color:#000; display:block; float:left; font-size:18px; font-weight:bold; text-align:center; width:33%; border-bottom:1px solid white; }
+.mc_months li.mc_m2, .mc_months li.mc_m5, .mc_months li.mc_m8, .mc_months li.mc_m11 { border-left:1px solid white; border-right:1px solid white; }
+.mc_months a.mc_link { display: block; padding:10px 0 !important; text-decoration:none; cursor: pointer; }
+.mc_months span.mc_postcount { color:#5B5B5B; display:block; font-size:10px; }
+.mc_months li.mc_inactive a.mc_link, .mc_months li.mc_inactive span.mc_postcount { color:#AEAA9D !important; cursor: default; }
+#mc_calendar_loading { background-color: #aaa; position: absolute; top: 0; width: 100%; text-align: center; color: white; font-size: 20px; line-height: 30px; font-weight: bold; padding: 5px 0; }
