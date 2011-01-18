@@ -27,6 +27,12 @@ Some features include:
 1. Add the **Month Calendar** widget to your sidebar through the **Appearance > Widgets** menu.
 1. After you add the widget to your sidebar you will be able to change its settings.
 
+== Screenshots ==
+
+1. The calendar widget using the default style.
+2. The settings screen, inside Appearance > Widgets.
+3. The calendar widget using a custom style.
+
 == Changelog ==
 
 = 1.0 =
