@@ -10,8 +10,7 @@ A calendar widget that shows post count per month.
 
 == Description ==
 
-This plugin will allow you to have a sidebar widget that shows your monthly post count for the current year. Displayed like
-a calendar, you can navigate between years using "previous" and "next" buttons.
+This plugin will allow you to have a sidebar widget that shows your monthly post count for the current year. Displayed like a calendar, you can navigate between years using "previous" and "next" buttons.
 
 Some features include:
 
@@ -23,8 +22,7 @@ Some features include:
 
 == Installation ==
 
-1. Upload the plugin directory to `/wp-content/plugins/`. If you're manually copying the files, don't forget to create 
-a `month-calendar` directory first.
+1. Upload the plugin directory to `/wp-content/plugins/`. If you're manually copying the files, don't forget to create a `month-calendar` directory first.
 1. Activate the plugin through the **Plugins > Installed** menu from the dashboard.
 1. Add the **Month Calendar** widget to your sidebar through the **Appearance > Widgets** menu.
 1. After you add the widget to your sidebar you will be able to change its settings.
