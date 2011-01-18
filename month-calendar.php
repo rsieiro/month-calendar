@@ -2,7 +2,7 @@
 
 /*
 Plugin Name: Month Calendar
-Plugin URI: http://rodrigo.sharpcube.com
+Plugin URI: http://github.com/rsieiro/month-calendar
 Description: A calendar widget that shows post count per month.
 Version: 1.0
 Author: Rodrigo Sieiro
