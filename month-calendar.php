@@ -4,13 +4,13 @@
 Plugin Name: Month Calendar
 Plugin URI: http://github.com/rsieiro/month-calendar
 Description: A calendar widget that shows post count per month.
-Version: 1.0
+Version: 1.0.1
 Author: Rodrigo Sieiro
 Author URI: http://rodrigo.sharpcube.com
 */
 
 // Plugin version
-define('MONTH_CALENDAR_VERSION', '1.0');
+define('MONTH_CALENDAR_VERSION', '1.0.1');
 
 // This URL will always point to the path our plugin files are located
 define('MC_URL', plugins_url() . '/' . str_replace(basename(__FILE__), "", plugin_basename(__FILE__)));
@@ -100,7 +100,7 @@ function mc_get_calendar($echo = true, $my_year = 0)
 		}
 		else if (is_month())
 		{
-			$thisyear = substr(get_query_var('m'), 0, 4);
+			$thisyear = intval(get_query_var('year')) == 0 ? substr(get_query_var('m'), 0, 4) : get_query_var('year');
 		}
 		else
 		{

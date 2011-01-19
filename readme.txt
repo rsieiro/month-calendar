@@ -4,17 +4,17 @@ Donate link: http://rodrigo.sharpcube.com/
 Tags: month, calendar, widget
 Requires at least: 3.0
 Tested up to: 3.0.4
-Stable tag: 1.0
+Stable tag: 1.0.1
 
 A calendar widget that shows post count per month.
 
 == Description ==
 
-This plugin will allow you to have a sidebar widget that shows your monthly post count for the current year. Displayed like a calendar, you can navigate between years using "previous" and "next" buttons.
+This plugin will allow you to have a sidebar widget that shows how many posts you published each month. Displayed like a calendar, you can navigate between years using "previous" and "next" buttons.
 
 Some features include:
 
-*   Data is reload using AJAX. This means that changing the year will not reload the whole page.
+*   Data is reloaded using AJAX. This means that changing the year will not reload the whole page.
 *   Comes with a bundled CSS file with a default style.
 *   The default CSS can be disabled so you can use your theme's CSS file to style it.
 *   It's a Widget, so you can move it around your sidebar as you wish.
@@ -34,6 +34,9 @@ Some features include:
 3. The calendar widget using a custom style.
 
 == Changelog ==
+
+= 1.0.1 =
+* Fixed: the year was not being shown correctly inside a month archive.
 
 = 1.0 =
 * First public release.
