@@ -1,20 +1,3 @@
-<?php
-
-	// This will load the basic WP options and make our plugin functions accessible
-	// It's needed because we're calling this PHP directly and not through WP
-	if (!function_exists('add_action'))
-	{
-    	require_once("../../../wp-config.php");
-	}
-
-	// Let the browser know we're outputting javascript
-	header('Content-type: text/javascript');
-	
-	// We use the URL constant defined by the plugin
-	$mc_file = MC_URL . 'month-calendar-ajax.php';
-
-?>
-
 function mc_reload_calendar(my_year)
 {
 	// Position the loading div over the calendar header, and fade it in
@@ -25,7 +8,7 @@ function mc_reload_calendar(my_year)
 	jQuery.ajax(
 	{
 		type: "GET",
-		url: "<?php echo $mc_file; ?>",
+		url: mc_url + "month-calendar-ajax.php",
 		data: "my_year=" + my_year,
 		success: function(msg)
 		{

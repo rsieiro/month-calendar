@@ -4,16 +4,31 @@
 Plugin Name: Month Calendar
 Plugin URI: http://github.com/rsieiro/month-calendar
 Description: A calendar widget that shows post count per month.
-Version: 1.0.1
+Version: 1.1
 Author: Rodrigo Sieiro
 Author URI: http://rodrigo.sharpcube.com
 */
 
 // Plugin version
-define('MONTH_CALENDAR_VERSION', '1.0.1');
+define('MONTH_CALENDAR_VERSION', '1.1');
+
+// Find the plugin path
+// Thanks to Alex King for this code snippet
+// http://alexking.org/blog/2011/12/15/wordpress-plugins-and-symlinks
+$mc_file = __FILE__;
+
+if (isset($plugin)) {
+	$my_plugin_file = $plugin;
+} else if (isset($mu_plugin)) {
+	$my_plugin_file = $mu_plugin;
+} else if (isset($network_plugin)) {
+	$my_plugin_file = $network_plugin;
+}
 
 // This URL will always point to the path our plugin files are located
-define('MC_URL', plugins_url() . '/' . str_replace(basename(__FILE__), "", plugin_basename(__FILE__)));
+define('MC_FILE', $mc_file);
+define('MC_PATH', WP_PLUGIN_DIR . '/' . basename(dirname($mc_file)) . '/');
+define('MC_URL', plugins_url() . '/' . basename(dirname($mc_file)) . '/');
 
 class Month_Widget_Calendar extends WP_Widget
 {
@@ -35,6 +50,9 @@ class Month_Widget_Calendar extends WP_Widget
 		echo $before_title . $title . $after_title;
 		echo '<div id="mc_wrapper">';
 		echo '<div id="mc_calendar">';
+		echo '<script type="text/javascript">';
+		echo 'var mc_url = "' . MC_URL . '";';
+		echo '</script>';
 		mc_get_calendar(true);
 		echo '</div>';
 		echo '<div id="mc_calendar_loading" style="display: none;">Loading...</div>';
@@ -241,11 +259,10 @@ function mc_add_header_code()
 		if (!wp_script_is('jquery-ui', 'registered')) wp_register_script('jquery-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js', array('jquery'), '1.8.6');
 		
 		// Enqueues the javascript file
-		wp_enqueue_script('mc_js', MC_URL . 'month-calendar.js.php', array('jquery', 'jquery-ui'), MONTH_CALENDAR_VERSION);
+		wp_enqueue_script('mc_js', MC_URL . 'month-calendar.js', array('jquery', 'jquery-ui'), MONTH_CALENDAR_VERSION);
 		
 		// Only enqueue the CSS file if the user wants to
-		if ($use_css)
-		{
+		if ($use_css) {
 			wp_enqueue_style('mc_style', MC_URL . 'month-calendar.css', array(), MONTH_CALENDAR_VERSION);
 		}
 	} 
