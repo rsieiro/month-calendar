@@ -3,8 +3,8 @@ Contributors: rsieiro
 Donate link: http://rodrigo.sharpcube.com/
 Tags: month, calendar, widget
 Requires at least: 3.0
-Tested up to: 3.0.4
-Stable tag: 1.0.1
+Tested up to: 3.3
+Stable tag: 1.1
 
 A calendar widget that shows post count per month.
 
@@ -34,6 +34,9 @@ Some features include:
 3. The calendar widget using a custom style.
 
 == Changelog ==
+
+= 1.1 =
+* Fixed: Month Calendar should play nice with cache plugins.
 
 = 1.0.1 =
 * Fixed: the year was not being shown correctly inside a month archive.
